@@ -1,0 +1,345 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.app__title {
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+/* ---------- Product list ---------- */
+
+.product-list {
+  margin-bottom: 32px;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 15px;
+}
+
+.status-text {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text);
+}
+
+.status-text--error {
+  color: var(--danger);
+}
+
+.list-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.kategori-filter {
+  display: flex;
+  gap: 8px;
+}
+
+.sort-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.sort-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.btn--kategori {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn--kategori-aktif {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.product-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  background: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.product-card__nama {
+  font-size: 16px;
+}
+
+.product-card__harga {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.badge--tersedia {
+  background: rgba(47, 158, 91, 0.15);
+  color: var(--success);
+}
+
+.badge--habis {
+  background: rgba(156, 163, 175, 0.2);
+  color: var(--habis);
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+}
+
+.btn--tambah {
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--tambah:disabled {
+  background: var(--habis);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.empty-text {
+  color: var(--habis);
+  font-style: italic;
+  padding: 12px 0;
+}
+
+/* ---------- Cart sidebar ---------- */
+
+.cart-sidebar {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  background: var(--bg-alt);
+}
+
+.cart-sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cart-sidebar__total {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.cart-sidebar hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 12px 0;
+}
+
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-item__nama {
+  flex: 1;
+}
+
+.cart-item__harga {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.btn--hapus {
+  background: none;
+  color: var(--danger);
+  padding: 4px 8px;
+  text-decoration: underline;
+}
+
+/* ---------- Checkout form ---------- */
+
+.checkout-form {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form-field {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 420px;
+}
+
+.form-field label {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.form-field input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 15px;
+}
+
+.form-error {
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.form-success {
+  color: var(--success);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.live-preview {
+  margin: 12px 0;
+  padding: 10px 14px;
+  background: var(--accent-bg);
+  border-radius: 6px;
+  color: var(--text-h);
+}
+
+.btn--checkout {
+  padding: 10px 24px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn--checkout:disabled {
+  background: var(--habis);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ---------- Product detail modal ---------- */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal-content {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 420px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content__image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--bg-alt);
+}
+
+.modal-content__harga {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.modal-content__kategori {
+  font-size: 13px;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.modal-content__deskripsi {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.btn--tutup {
+  align-self: flex-end;
+  padding: 8px 18px;
+  background: var(--accent);
+  color: #fff;
+  margin-top: 8px;
+}
